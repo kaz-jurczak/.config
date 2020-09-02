@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# git gud:
+# Checkout to a branch based on a branch name substring (eg. git gut 2000 = git checkout bugs/kz/2000_crash)
+
+# We need a branch parameter
+branchName=$1
+previousBranch="-"
+if [ -z "$1" ]
+then
+	echo "No branch name provided"
+	exit 1
+fi
+
+#test -z "$branchName" %% echo "ERROR: Provide a branch name." 1>&2 && exit 1
+
+# if '-', return to last branch
+if [ "$branchName" = "$previousBranch" ];
+then
+	git checkout -
+else
+	git branch -a | grep -v remotes | grep "$branchName" | head -n 1 | xargs git checkout
+fi

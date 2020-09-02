@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# git majonez:
+# Push commits and checkout master
+
+git push;
+git checkout master
