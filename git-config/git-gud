@@ -12,8 +12,6 @@ then
 	exit 1
 fi
 
-#test -z "$branchName" %% echo "ERROR: Provide a branch name." 1>&2 && exit 1
-
 # if '-', return to last branch
 if [ "$branchName" = "$previousBranch" ];
 then
