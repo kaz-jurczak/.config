@@ -8,7 +8,7 @@ branchName=$1
 previousBranch="-"
 if [ -z "$1" ]
 then
-	echo "No branch name provided"
+	echo "git gud: No branch name provided"
 	exit 1
 fi
 
